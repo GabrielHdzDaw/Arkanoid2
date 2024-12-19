@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gabhercol\\Documents\\DAW\\Programacion\\Visual Studio 2022\\Arkanoid2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AC20BCB4-CCFE-4C26-92ED-B4D1E76E02D6}|Arkanoid2\\Arkanoid2.csproj|c:\\users\\gabhercol\\documents\\daw\\programacion\\visual studio 2022\\arkanoid2\\arkanoid2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC20BCB4-CCFE-4C26-92ED-B4D1E76E02D6}|Arkanoid2\\Arkanoid2.csproj|solutionrelative:arkanoid2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gabhercol\\Documents\\DAW\\Programacion\\Visual Studio 2022\\Arkanoid2\\Arkanoid2\\Program.cs",
+              "RelativeDocumentMoniker": "Arkanoid2\\Program.cs",
+              "ToolTip": "C:\\Users\\gabhercol\\Documents\\DAW\\Programacion\\Visual Studio 2022\\Arkanoid2\\Arkanoid2\\Program.cs",
+              "RelativeToolTip": "Arkanoid2\\Program.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwFcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T11:28:05.16Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

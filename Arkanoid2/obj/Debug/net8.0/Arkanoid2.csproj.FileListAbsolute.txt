@@ -1,0 +1,14 @@
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\bin\Debug\net8.0\Arkanoid2.exe
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\bin\Debug\net8.0\Arkanoid2.deps.json
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\bin\Debug\net8.0\Arkanoid2.runtimeconfig.json
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\bin\Debug\net8.0\Arkanoid2.dll
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\bin\Debug\net8.0\Arkanoid2.pdb
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\obj\Debug\net8.0\Arkanoid2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\obj\Debug\net8.0\Arkanoid2.AssemblyInfoInputs.cache
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\obj\Debug\net8.0\Arkanoid2.AssemblyInfo.cs
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\obj\Debug\net8.0\Arkanoid2.csproj.CoreCompileInputs.cache
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\obj\Debug\net8.0\Arkanoid2.dll
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\obj\Debug\net8.0\refint\Arkanoid2.dll
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\obj\Debug\net8.0\Arkanoid2.pdb
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\obj\Debug\net8.0\Arkanoid2.genruntimeconfig.cache
+C:\Users\gabhercol\Documents\DAW\Programacion\Visual Studio 2022\Arkanoid2\Arkanoid2\obj\Debug\net8.0\ref\Arkanoid2.dll
