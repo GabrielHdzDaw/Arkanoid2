@@ -35,18 +35,24 @@ public class Test
 		y += dy;
 	}
 	
-	public static void ChangeBallDirection(ref int x, ref int dx, ref int y, ref int dy)
+	public static void ChangeBallDirection(ref int x, ref int dx, ref int y, ref int dy, ref int barX, ref int barY)
 	{
-		if (x + dx >= Console.WindowWidth || x + dx <= 0)
-		{
-			dx *= -1;
-		}
-		
-		if (y + dy >= Console.WindowHeight || y + dy <= 0)
-		{
-			dy *= -1;
-		}
-	}
+            if (x + dx >= Console.WindowWidth || x + dx <= 0)
+            {
+                dx *= -1;
+            }
+
+            if (y + dy >= Console.WindowHeight || y + dy <= 0)
+            {
+                dy *= -1;
+            }
+
+            
+            if (y + dy == barY && x + dx >= barX && x + dx <= barX + 16)
+            {
+                dy *= -1; 
+            }
+        }
 	
 	public static void DrawBall(int x, int y)
 	{
@@ -106,7 +112,7 @@ public class Test
             Thread.Sleep(10);
             EraseBall(x, y);
             MoveBall(ref x, ref dx, ref y, ref dy);
-            ChangeBallDirection(ref x, ref dx, ref y, ref dy);
+            ChangeBallDirection(ref x, ref dx, ref y, ref dy, ref barX, ref barY);
         }
 		
 		
