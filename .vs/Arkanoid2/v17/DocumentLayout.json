@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\gabhercol\\Documents\\DAW\\Programacion\\Visual Studio 2022\\Arkanoid2\\",
+  "WorkspaceRootPath": "C:\\Users\\gabri\\Documents\\DAW\\Programaci\u00F3n\\Arkanoid2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC20BCB4-CCFE-4C26-92ED-B4D1E76E02D6}|Arkanoid2\\Arkanoid2.csproj|c:\\users\\gabhercol\\documents\\daw\\programacion\\visual studio 2022\\arkanoid2\\arkanoid2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AC20BCB4-CCFE-4C26-92ED-B4D1E76E02D6}|Arkanoid2\\Arkanoid2.csproj|c:\\users\\gabri\\documents\\daw\\programaci\u00F3n\\arkanoid2\\arkanoid2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC20BCB4-CCFE-4C26-92ED-B4D1E76E02D6}|Arkanoid2\\Arkanoid2.csproj|solutionrelative:arkanoid2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\gabhercol\\Documents\\DAW\\Programacion\\Visual Studio 2022\\Arkanoid2\\Arkanoid2\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\DAW\\Programaci\u00F3n\\Arkanoid2\\Arkanoid2\\Program.cs",
               "RelativeDocumentMoniker": "Arkanoid2\\Program.cs",
-              "ToolTip": "C:\\Users\\gabhercol\\Documents\\DAW\\Programacion\\Visual Studio 2022\\Arkanoid2\\Arkanoid2\\Program.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\DAW\\Programaci\u00F3n\\Arkanoid2\\Arkanoid2\\Program.cs",
               "RelativeToolTip": "Arkanoid2\\Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwCwAAAA0AAAAAAAAAA==",
+              "ViewState": "AQIAAB4AAAAAAAAAAADwvzgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-19T11:28:05.16Z",
               "EditorCaption": ""
