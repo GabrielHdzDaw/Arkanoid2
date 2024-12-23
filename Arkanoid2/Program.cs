@@ -8,6 +8,7 @@
  */
 
     using System;
+    using System.Media;
 
     public class Arkanoid
     {
@@ -33,16 +34,20 @@
 
         public static string[,] MakeBrickCoordinatesArray(int width, int height)
         {
-            int plus = 0;
+            int brickWidth = 4; 
+            int brickHeight = 1; 
             string[,] coordinates = new string[height, width];
-            for (int i = 1; i < coordinates.GetLength(0); i++)
+
+            for (int row = 0; row < height; row++) 
             {
-                for (int j = 1; j < coordinates.GetLength(1); j++)
+                for (int col = 0; col < width; col++) 
                 {
-                    DrawBrick(i + plus, j);
-                    coordinates[i, j] = i + plus + " " + j;
+                    int x = col * brickWidth;
+                    int y = row * brickHeight;
+                    
+                    DrawBrick(x, y);
+                    coordinates[row, col] = $"{x} {y}";
                 }
-                plus += 4;
             }
             return coordinates;
         }
@@ -50,7 +55,7 @@
         {
             if (running)
             {
-                if ((brickX >= x && brickX <= x + 4) || (brickY == y))
+                if ((brickX >= x && brickX <= x + 4) || (brickY == y + 1 || brickY == y - 1))
                 {
                     return true;
                 }
@@ -87,7 +92,9 @@
         public static void DrawBar(int x, int y)
         {
             Console.SetCursorPosition(x, y);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.Write("▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓");
+            Console.ResetColor();
         }
 
         public static void EraseBar(int x, int y)
@@ -106,11 +113,14 @@
             if (ballX >= Console.WindowWidth - 1 || ballX <= 0)
             {
                 dx *= -1;
+                
+                ballX = Math.Clamp(ballX, 0, Console.WindowWidth - 1); // Mantener dentro del rango
             }
 
             if (ballY >= Console.WindowHeight - 1 || ballY <= 0)
             {
                 dy *= -1;
+                ballY = Math.Clamp(ballY, 0, Console.WindowHeight - 1); // Mantener dentro del rango
             }
 
             // Colisiones barra
@@ -121,6 +131,7 @@
 
             DrawBall(ballX, ballY);
         }
+
 
         public static void DrawBall(int x, int y)
         {
@@ -145,21 +156,67 @@
 
             DrawBar(barX, barY);
 
+            
+            int rows = 5; 
+            int cols = Console.WindowWidth / 4 - 2;
+            int brickWidth = 4;
+            int brickHeight = 1;
+
+           
+            bool[,] bricks = new bool[rows, cols];
+
+           
+            for (int row = 0; row < rows; row++)
+            {
+                for (int col = 0; col < cols; col++)
+                {
+                    int x = col * brickWidth;
+                    int y = row * brickHeight;
+                    bricks[row, col] = true; 
+                    if (row % 2 == 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    }
+                    
+                    DrawBrick(x, y);
+                    Console.ResetColor();
+                }
+            }
+
             while (running)
             {
-                // Leer input del usuario si está disponible
+               
                 ConsoleKeyInfo? key = Console.KeyAvailable ? Console.ReadKey(true) : (ConsoleKeyInfo?)null;
                 MoveBar(key);
 
-                // Mover la bola
+               
                 MoveBall();
-                if (BrickCollision(ballX, ballY, b))
-                {
 
+                
+                for (int row = 0; row < rows; row++)
+                {
+                    for (int col = 0; col < cols; col++)
+                    {
+                        if (bricks[row, col]) 
+                        {
+                            int brickX = col * brickWidth;
+                            int brickY = row * brickHeight;
+
+                           
+                            if (ballX >= brickX && ballX < brickX + brickWidth &&
+                                ballY == brickY)
+                            {
+                                dy *= -1; 
+                                EraseBrick(brickX, brickY); 
+                                bricks[row, col] = false; 
+                                break; 
+                            }
+                        }
+                    }
                 }
-                // Control de velocidad del juego
                 System.Threading.Thread.Sleep(25);
             }
         }
+
     }
 }
