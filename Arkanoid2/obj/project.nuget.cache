@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2pNhLeYqDgQ=",
+  "dgSpecHash": "0li9KvZWph0=",
   "success": true,
   "projectFilePath": "C:\\Users\\gabri\\Documents\\DAW\\Programación\\Arkanoid2\\Arkanoid2\\Arkanoid2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -8,17 +8,24 @@
  */
 
     using System;
+    using System.Threading;
     using System.Media;
 
     public class Arkanoid
     {
-        private static int barX;
-        private static int barY;
-        private static int ballX;
-        private static int ballY;
-        private static int dx = 1;
-        private static int dy = 1;
-        private static bool running = true;
+        static SoundPlayer barReboundSound = new SoundPlayer(@"Sounds\barRebound.wav");
+        static SoundPlayer brickReboundSound = new SoundPlayer(@"Sounds\brickRebound.wav");
+        static int rows = 5;
+        static int cols = Console.WindowWidth / 4;
+        static int brickWidth = 4;
+        static int brickHeight = 1;
+        static int barX;
+        static int barY;
+        static int ballX;
+        static int ballY;
+        static int dx = 1;
+        static int dy = 1;
+        static bool running = true;
 
         public static void DrawBrick(int x, int y)
         {
@@ -32,36 +39,51 @@
             Console.Write("    ");
         }
 
-        public static string[,] MakeBrickCoordinatesArray(int width, int height)
+        public static bool[,] DrawBricks()
         {
-            int brickWidth = 4; 
-            int brickHeight = 1; 
-            string[,] coordinates = new string[height, width];
-
-            for (int row = 0; row < height; row++) 
+            bool[,] bricks = new bool[rows, cols];
+            for (int i = 0; i < rows; i++)
             {
-                for (int col = 0; col < width; col++) 
+                for (int j = 0; j < cols; j++)
                 {
-                    int x = col * brickWidth;
-                    int y = row * brickHeight;
-                    
+                    int x = j * brickWidth;
+                    int y = i * brickHeight;
+                    bricks[i, j] = true;
+                    if (i % 2 == 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    }
+
                     DrawBrick(x, y);
-                    coordinates[row, col] = $"{x} {y}";
+                    Console.ResetColor();
                 }
             }
-            return coordinates;
+            return bricks;
         }
-        public static bool BrickCollision(int x, int y, int brickX, int brickY)
+        public static void BrickCollision(int rows, int cols, bool[,] bricks)
         {
-            if (running)
+            for (int i = 0; i < rows; i++)
             {
-                if ((brickX >= x && brickX <= x + 4) || (brickY == y + 1 || brickY == y - 1))
+                for (int j = 0; j < cols; j++)
                 {
-                    return true;
-                }
+                    if (bricks[i, j])
+                    {
+                         int brickX = j * brickWidth;
+                         int brickY = i * brickHeight;
 
+
+                        if (ballX >= brickX && ballX < brickX + brickWidth &&
+                            ballY == brickY)
+                        {
+                            dy *= -1;
+                            brickReboundSound.Play();
+                            EraseBrick(brickX, brickY);
+                            bricks[i, j] = false;
+                            break;
+                        }
+                    }
+                }
             }
-            return false;
         }
         public static void MoveBar(ConsoleKeyInfo? key)
         {
@@ -113,7 +135,6 @@
             if (ballX >= Console.WindowWidth - 1 || ballX <= 0)
             {
                 dx *= -1;
-                
                 ballX = Math.Clamp(ballX, 0, Console.WindowWidth - 1); // Mantener dentro del rango
             }
 
@@ -127,6 +148,7 @@
             if (ballY + dy == barY && ballX + dx >= barX && ballX + dx <= barX + 16)
             {
                 dy *= -1;
+                barReboundSound.Play();
             }
 
             DrawBall(ballX, ballY);
@@ -154,67 +176,17 @@
 
             Console.CursorVisible = false;
 
+            bool[,] bricks = DrawBricks();
+
             DrawBar(barX, barY);
-
-            
-            int rows = 5; 
-            int cols = Console.WindowWidth / 4 - 2;
-            int brickWidth = 4;
-            int brickHeight = 1;
-
-           
-            bool[,] bricks = new bool[rows, cols];
-
-           
-            for (int row = 0; row < rows; row++)
-            {
-                for (int col = 0; col < cols; col++)
-                {
-                    int x = col * brickWidth;
-                    int y = row * brickHeight;
-                    bricks[row, col] = true; 
-                    if (row % 2 == 0)
-                    {
-                        Console.ForegroundColor = ConsoleColor.DarkCyan;
-                    }
-                    
-                    DrawBrick(x, y);
-                    Console.ResetColor();
-                }
-            }
 
             while (running)
             {
-               
                 ConsoleKeyInfo? key = Console.KeyAvailable ? Console.ReadKey(true) : (ConsoleKeyInfo?)null;
                 MoveBar(key);
-
-               
                 MoveBall();
-
-                
-                for (int row = 0; row < rows; row++)
-                {
-                    for (int col = 0; col < cols; col++)
-                    {
-                        if (bricks[row, col]) 
-                        {
-                            int brickX = col * brickWidth;
-                            int brickY = row * brickHeight;
-
-                           
-                            if (ballX >= brickX && ballX < brickX + brickWidth &&
-                                ballY == brickY)
-                            {
-                                dy *= -1; 
-                                EraseBrick(brickX, brickY); 
-                                bricks[row, col] = false; 
-                                break; 
-                            }
-                        }
-                    }
-                }
-                System.Threading.Thread.Sleep(25);
+                BrickCollision(rows, cols, bricks);
+                Thread.Sleep(25);
             }
         }
 

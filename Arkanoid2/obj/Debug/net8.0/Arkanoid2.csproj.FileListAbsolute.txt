@@ -28,3 +28,14 @@ C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\obj\Debug\net8.0\
 C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\obj\Debug\net8.0\Arkanoid2.pdb
 C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\obj\Debug\net8.0\Arkanoid2.genruntimeconfig.cache
 C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\obj\Debug\net8.0\ref\Arkanoid2.dll
+C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\obj\Debug\net8.0\Arkanoid2.csproj.AssemblyReference.cache
+C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\obj\Debug\net8.0\Arkanoid2.csproj.Up2Date
+C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\bin\Debug\net8.0\Sounds\barRebound.wav
+C:\Users\gabri\Documents\DAW\Programación\Arkanoid2\Arkanoid2\bin\Debug\net8.0\Sounds\brickRebound.wav
